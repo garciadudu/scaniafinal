@@ -1,0 +1,41 @@
+<table>
+    <th>
+        <tr>
+            <td>
+                Id
+            </td>
+            <td>
+                Nome
+            </td>
+            <td>
+                Email
+            </td>
+            <td>
+                Telefone
+            </td>
+            <td>
+                Ações
+            </td>
+        </tr>
+    </th>
+    <tbody>
+        <tr *ngFor="let cliente of this.ClienteService.clients">
+            <td>
+                {{cliente.Id}}
+            </td>
+            <td>
+                {{cliente.Nome}}
+            </td>
+            <td>
+                {{cliente.Email}}
+            </td>
+            <td>
+                {{cliente.Telefone}}
+            </td>
+            <td>
+                <button class="btn btn-primary" (click)="salvar(cliente)">Salvar</button>
+                <button class="btn btn-primary" (click)="salvar(cliente)">Editar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
