@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { Component } from '@angular/core';
 import { Cliente } from './cliente.interface';
 import { ClienteService } from './cliente.service';
 import { NgFor } from '@angular/common';
@@ -19,8 +19,6 @@ export class PrincipalComponent {
   }
 
   salvar = function (data: Cliente) { 
-    var cli: Cliente;
-
     if (data.Email!==null && data.Email!==undefined && !data.Email.includes('@') && !data.Email.includes('.')) {
       alert('Email inválido');
     }
